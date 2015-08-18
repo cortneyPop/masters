@@ -1,0 +1,37 @@
+// ES6 javascript
+
+// ** importing react
+import React from 'react'
+
+// ** live reloads on css doc save (no watch/ etc)
+import styles from './styles/main.styl'
+
+// ** Can also use require to include the css file
+// require('./styles/main.css')
+
+// const is same thing as "var" - ES6 way
+const Hello = React.createClass ({
+    render () {
+        return <div>Hello, {this.props.name}</div>
+    }
+})
+
+
+React.render(<Hello name="cortney"/>, document.body)
+
+// ** Same thing as above (not ES6) **
+// *****
+var React = require('react')
+
+var Hello = React.createClass ({
+    render: function () {
+        return <div>Hello, {this.props.name}</div>
+    }
+})
+
+React.render(<Hello name="cortney"/>, document.body)
+// *****
+
+
+
+
